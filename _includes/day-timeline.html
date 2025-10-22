@@ -69,14 +69,16 @@ Per-post vertical timeline. Supports `media` items:
             {%- assign url = ph -%}
             {%- assign ext = url | split: '?' | first | split: '.' | last | downcase -%}
             {%- if ext == 'mp4' or ext == 'webm' or ext == 'mov' -%}
-              <video controls preload="metadata" class="vid"
-                     playsinline webkit-playsinline
-                     data-group="ev{{ group_id }}"
-                     data-type="video"
-                     data-src="{{ url | relative_url }}"
-                     data-caption="">
-                <source src="{{ url | relative_url }}" type="video/{{ ext }}">
-              </video>
+              <button type="button" class="ph video-thumb"
+                      data-group="ev{{ group_id }}"
+                      data-type="video"
+                      data-src="{{ url | relative_url }}"
+                      data-caption="">
+                <video class="vid-preview" src="{{ url | relative_url }}" preload="metadata"
+                       muted playsinline webkit-playsinline></video>
+                <span class="play-icon" aria-hidden="true">▶</span>
+                <span class="sr-only">View video for {{ ev.title | escape }}</span>
+              </button>
             {%- else -%}
               <button type="button" class="ph"
                       data-group="ev{{ group_id }}"
@@ -91,27 +93,29 @@ Per-post vertical timeline. Supports `media` items:
             {%- assign t = ph.type | default: 'image' -%}
             {%- assign cap = ph.caption | default: "" -%}
             {%- if t == 'youtube' and ph.id -%}
-              <div class="yt-wrap"
-                   data-group="ev{{ group_id }}"
-                   data-type="youtube"
-                   data-ytid="{{ ph.id | escape }}"
-                   data-caption="{{ cap | escape }}">
-                <iframe src="https://www.youtube.com/embed/{{ ph.id | escape }}"
-                        title="YouTube video" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        loading="lazy" allowfullscreen></iframe>
-              </div>
+              {%- assign thumb = "https://img.youtube.com/vi/" | append: ph.id | append: "/hqdefault.jpg" -%}
+              <button type="button" class="ph yt-thumb"
+                      style="background-image: url('{{ thumb }}');"
+                      data-group="ev{{ group_id }}"
+                      data-type="youtube"
+                      data-ytid="{{ ph.id | escape }}"
+                      data-caption="{{ cap | escape }}">
+                <span class="play-icon" aria-hidden="true">▶</span>
+                <span class="sr-only">View video for {{ ev.title | escape }}</span>
+              </button>
             {%- elsif t == 'video' and ph.src -%}
               {%- assign url = ph.src -%}
               {%- assign ext = url | split: '?' | first | split: '.' | last | downcase -%}
-              <video controls preload="metadata" class="vid"
-                     playsinline webkit-playsinline
-                     data-group="ev{{ group_id }}"
-                     data-type="video"
-                     data-src="{{ url | relative_url }}"
-                     data-caption="{{ cap | escape }}">
-                <source src="{{ url | relative_url }}" type="video/{{ ext }}">
-              </video>
+              <button type="button" class="ph video-thumb"
+                      data-group="ev{{ group_id }}"
+                      data-type="video"
+                      data-src="{{ url | relative_url }}"
+                      data-caption="{{ cap | escape }}">
+                <video class="vid-preview" src="{{ url | relative_url }}" preload="metadata"
+                       muted playsinline webkit-playsinline></video>
+                <span class="play-icon" aria-hidden="true">▶</span>
+                <span class="sr-only">View video for {{ ev.title | escape }}</span>
+              </button>
             {%- elsif t == 'map' -%}
               {%- if ph.src -%}
                 <div class="map-wrap"
