@@ -4,8 +4,8 @@ title: "Day 13 — To Singapore"
 date: 2025-10-25
 location: "Hong Kong, Hong Kong -> Singapore, Singapore"
 cover_image: /assets/images/day13/breakfast.jpg
-summary: "More HK exploration"
-tags: [hong kong]
+summary: "Made it to Singapore"
+tags: [hong kong, singapore]
 events:
   - title: "Cha Chaan Teng Breakfast"
     text: |
