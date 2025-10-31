@@ -42,9 +42,9 @@ events:
       caption: "Floating ramen outside the museum"
     - src: /assets/images/day5/ramen-museum.jpg
       caption: "The area with the stalls is decorated to look like old-timey Japan"
-    - /assets/images/day5/wall.jpg
-    - /assets/images/day5/sumire-exterior.jpg
-    - /assets/images/day5/cameras.jpg
+    - src: /assets/images/day5/wall.jpg
+    - src: /assets/images/day5/sumire-exterior.jpg
+    - src: /assets/images/day5/cameras.jpg
     - src: /assets/images/day5/sumire-ramen.jpg
       caption: "I think this was a miso tonkotsu ramen. This shop was the \"Sumire All-Stars\" shop for October, essentially rotating through a bunch of chefs who were the disciples of an old shop in Sapporo named \"Sumire Ramen\". This was really good, with a strong porky flavour (probably from all that pork fat on top)."
     - src: /assets/images/day5/sumire-interior.jpg

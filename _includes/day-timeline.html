@@ -1,8 +1,7 @@
 
 {%- comment -%}
 Per-post vertical timeline. Supports `media` items:
-- String URL (image/video)
-- Object with keys: src, type: 'video' | 'image' (optional), caption
+- Objects with keys: src, type: 'video' | 'image' (optional), caption
 - YouTube: {type: 'youtube', id: 'VIDEO_ID', caption: '...'}
 - Map embeds:
     * {type: 'map', src: 'EMBED_URL', caption: '...'}
@@ -64,95 +63,85 @@ Per-post vertical timeline. Supports `media` items:
       {%- if media -%}
       <div class="day-media">
         {%- for ph in media -%}
-          {%- assign is_string = ph | jsonify | slice: 0, 1 -%}
-          {%- if is_string == '"' or is_string == '\'' -%}
-            {%- assign url = ph -%}
-            {%- assign ext = url | split: '?' | first | split: '.' | last | downcase -%}
+          {%- assign cap = ph.caption | default: "" -%}
+          {%- assign src = ph.src -%}
+          {%- assign ext = '' -%}
+          {%- if src -%}
+            {%- assign ext = src | split: '?' | first | split: '.' | last | downcase -%}
+          {%- endif -%}
+          {%- assign t = ph.type | default: '' -%}
+          {%- if t == '' and ph.id -%}
+            {%- assign t = 'youtube' -%}
+          {%- endif -%}
+          {%- if t == '' and src -%}
             {%- if ext == 'mp4' or ext == 'webm' or ext == 'mov' -%}
-              <button type="button" class="ph video-thumb"
-                      data-group="ev{{ group_id }}"
-                      data-type="video"
-                      data-src="{{ url | relative_url }}"
-                      data-caption="">
-                <video class="vid-preview" src="{{ url | relative_url }}" preload="metadata"
-                       muted playsinline webkit-playsinline></video>
-                <span class="play-icon" aria-hidden="true">▶</span>
-                <span class="sr-only">View video for {{ ev.title | escape }}</span>
-              </button>
+              {%- assign t = 'video' -%}
             {%- else -%}
-              <button type="button" class="ph"
-                      data-group="ev{{ group_id }}"
-                      data-type="image"
-                      data-src="{{ url | relative_url }}"
-                      data-caption=""
-                      aria-label="View image for {{ ev.title | escape }}">
-                <img loading="lazy" src="{{ url | relative_url }}" alt="Media for {{ ev.title | escape }}">
-              </button>
+              {%- assign t = 'image' -%}
             {%- endif -%}
-          {%- else -%}
-            {%- assign t = ph.type | default: 'image' -%}
-            {%- assign cap = ph.caption | default: "" -%}
-            {%- if t == 'youtube' and ph.id -%}
-              {%- assign thumb = "https://img.youtube.com/vi/" | append: ph.id | append: "/hqdefault.jpg" -%}
-              <button type="button" class="ph yt-thumb"
-                      style="background-image: url('{{ thumb }}');"
-                      data-group="ev{{ group_id }}"
-                      data-type="youtube"
-                      data-ytid="{{ ph.id | escape }}"
-                      data-caption="{{ cap | escape }}">
-                <span class="play-icon" aria-hidden="true">▶</span>
-                <span class="sr-only">View video for {{ ev.title | escape }}</span>
-              </button>
-            {%- elsif t == 'video' and ph.src -%}
-              {%- assign url = ph.src -%}
-              {%- assign ext = url | split: '?' | first | split: '.' | last | downcase -%}
-              <button type="button" class="ph video-thumb"
-                      data-group="ev{{ group_id }}"
-                      data-type="video"
-                      data-src="{{ url | relative_url }}"
-                      data-caption="{{ cap | escape }}">
-                <video class="vid-preview" src="{{ url | relative_url }}" preload="metadata"
-                       muted playsinline webkit-playsinline></video>
-                <span class="play-icon" aria-hidden="true">▶</span>
-                <span class="sr-only">View video for {{ ev.title | escape }}</span>
-              </button>
-            {%- elsif t == 'map' -%}
-              {%- if ph.src -%}
-                <div class="map-wrap"
-                     data-group="ev{{ group_id }}"
-                     data-type="map"
-                     data-src="{{ ph.src | escape }}"
-                     data-caption="{{ cap | escape }}">
-                  <iframe src="{{ ph.src | escape }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              {%- elsif ph.place -%}
-                {%- assign q = ph.place | uri_escape -%}
-                <div class="map-wrap"
-                     data-group="ev{{ group_id }}"
-                     data-type="map"
-                     data-src="https://www.google.com/maps?q={{ q }}&output=embed"
-                     data-caption="{{ cap | escape }}">
-                  <iframe src="https://www.google.com/maps?q={{ q }}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              {%- elsif ph.lat and ph.lng -%}
-                <div class="map-wrap"
-                     data-group="ev{{ group_id }}"
-                     data-type="map"
-                     data-src="https://www.google.com/maps?q={{ ph.lat }},{{ ph.lng }}&output=embed"
-                     data-caption="{{ cap | escape }}">
-                  <iframe src="https://www.google.com/maps?q={{ ph.lat }},{{ ph.lng }}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-              {%- endif -%}
-            {%- elsif ph.src -%}
-              <button type="button" class="ph"
-                      data-group="ev{{ group_id }}"
-                      data-type="image"
-                      data-src="{{ ph.src | relative_url }}"
-                      data-caption="{{ cap | escape }}"
-                      aria-label="View image for {{ ev.title | escape }}">
-                <img loading="lazy" src="{{ ph.src | relative_url }}" alt="Media for {{ ev.title | escape }}">
-              </button>
+          {%- endif -%}
+          {%- if t == '' -%}
+            {%- assign t = 'image' -%}
+          {%- endif -%}
+
+          {%- if t == 'youtube' and ph.id -%}
+            {%- assign thumb = "https://img.youtube.com/vi/" | append: ph.id | append: "/hqdefault.jpg" -%}
+            <button type="button" class="ph yt-thumb"
+                    style="background-image: url('{{ thumb }}');"
+                    data-group="ev{{ group_id }}"
+                    data-type="youtube"
+                    data-ytid="{{ ph.id | escape }}"
+                    data-caption="{{ cap | escape }}">
+              <span class="play-icon" aria-hidden="true">▶</span>
+              <span class="sr-only">View video for {{ ev.title | escape }}</span>
+            </button>
+          {%- elsif t == 'video' and src -%}
+            <button type="button" class="ph video-thumb"
+                    data-group="ev{{ group_id }}"
+                    data-type="video"
+                    data-src="{{ src | relative_url }}"
+                    data-caption="{{ cap | escape }}">
+              <video class="vid-preview" src="{{ src | relative_url }}" preload="metadata"
+                     muted playsinline webkit-playsinline></video>
+              <span class="play-icon" aria-hidden="true">▶</span>
+              <span class="sr-only">View video for {{ ev.title | escape }}</span>
+            </button>
+          {%- elsif t == 'map' -%}
+            {%- if ph.src -%}
+              <div class="map-wrap"
+                   data-group="ev{{ group_id }}"
+                   data-type="map"
+                   data-src="{{ ph.src | escape }}"
+                   data-caption="{{ cap | escape }}">
+                <iframe src="{{ ph.src | escape }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            {%- elsif ph.place -%}
+              {%- assign q = ph.place | uri_escape -%}
+              <div class="map-wrap"
+                   data-group="ev{{ group_id }}"
+                   data-type="map"
+                   data-src="https://www.google.com/maps?q={{ q }}&output=embed"
+                   data-caption="{{ cap | escape }}">
+                <iframe src="https://www.google.com/maps?q={{ q }}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            {%- elsif ph.lat and ph.lng -%}
+              <div class="map-wrap"
+                   data-group="ev{{ group_id }}"
+                   data-type="map"
+                   data-src="https://www.google.com/maps?q={{ ph.lat }},{{ ph.lng }}&output=embed"
+                   data-caption="{{ cap | escape }}">
+                <iframe src="https://www.google.com/maps?q={{ ph.lat }},{{ ph.lng }}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
             {%- endif -%}
+          {%- elsif src -%}
+            <button type="button" class="ph"
+                    data-group="ev{{ group_id }}"
+                    data-type="image"
+                    data-src="{{ src | relative_url }}"
+                    data-caption="{{ cap | escape }}"
+                    aria-label="View image for {{ ev.title | escape }}">
+              <img loading="lazy" src="{{ src | relative_url }}" alt="Media for {{ ev.title | escape }}">
+            </button>
           {%- endif -%}
         {%- endfor -%}
       </div>
