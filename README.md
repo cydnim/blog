@@ -11,11 +11,10 @@ This is a **GitHub Pages–ready** Jekyll starter with:
 3) Visit your Pages URL after it builds.
 
 ## Run locally
-> **Ruby TLS note (mise installs):** some Ruby builds ship without a populated cert store, causing `jekyll-remote-theme` downloads to fail with `certificate verify failed (unable to get certificate CRL)`. Until Ruby is rebuilt with proper CA paths, preload the provided patch so HTTPS works.
 
 ```bash
 bundle install
-RUBYOPT=-r./config/ssl_cert_store_patch bundle exec jekyll serve
+bundle exec jekyll serve
 ```
 
 ## Write a post with per-day events
