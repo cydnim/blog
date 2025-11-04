@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Day 20 — Halloween"
+title: "Day 19 — Halloween"
 date: 2025-10-31
 location: "Ho Chi Minh City, Vietnam"
-cover_image: /assets/images/day19/coffee-shop-1.jpg
-summary: "Spooky scary saigon"
+cover_image: /assets/images/day19/old-parliament.jpg
+summary: "Spooky scary Saigon"
 tags: [saigon, ho chi minh city, vietnam]
 events:
   - title: "Banh Mi Breakfast"
