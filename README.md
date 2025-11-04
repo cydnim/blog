@@ -6,8 +6,8 @@ This is a **GitHub Pages–ready** Jekyll starter with:
 - A **per-post (Day) internal timeline** include to show events like breakfast, zoo, etc.
 
 ## Quick start (GitHub Pages)
-1) Create a repo and upload these files (or unzip).  
-2) Settings → Pages → Source: *Deploy from a branch*; Branch: `main` (root).  
+1) Create a repo and upload these files (or unzip).
+2) Settings → Pages → Source: *Deploy from a branch*; Branch: `main` (root).
 3) Visit your Pages URL after it builds.
 
 ## Run locally
