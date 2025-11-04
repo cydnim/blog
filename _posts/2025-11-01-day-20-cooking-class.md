@@ -56,7 +56,7 @@ events:
     - src: /assets/images/day20/cc-13-canh-chua.jpg
       caption: "Canh Chua, which is a sweet and sour Vietnamese soup with a tamarind base and plenty of veggies!"
     - src: /assets/images/day20/cc-14-finished-dishes.jpg
-      caption: "The finished dishes. I'll just do the top row since the bottom row is the same dishes just in a different order. Left to right: Stir fried morning glory with garlic, braised catfish in fish sauce, stir fried pork, ground pork omelette, (repeat catfish), canh chua"
+      caption: "The finished dishes. I'll just do the top row since the bottom row is the same dishes just in a different order. Left to right: Stir fried morning glory with garlic, braised catfish in fish sauce, stir fried pork, duck egg omelette filled with ground pork, (repeat catfish), canh chua"
     - src: /assets/images/day20/cc-15-auntie-with-dishes.jpg
       caption: "Us posing with Auntie Four and the dishes!"
     - src: /assets/images/day20/cc-16-alex-serving.jpg
