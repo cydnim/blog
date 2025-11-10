@@ -5,7 +5,7 @@ date: 2025-11-03
 location: "Ho Chi Minh City, Vietnam -> Vientiane, Laos"
 cover_image: /assets/images/day22/night-market-stalls.jpg
 summary: "Splitting up with the boys"
-tags: [saigon, ho chi minh city, mekong, cai be, vietnam]
+tags: [saigon, ho chi minh city, vietnam, vientiane, laos]
 events:
   - title: "Egg Coffee"
     text: |
@@ -16,6 +16,9 @@ events:
     - src: /assets/images/day22/egg-coffee-2.jpg
       caption: The coffee shop had a very interesting interior, completely full of random stuff
     - src: /assets/images/day22/egg-coffee-3.jpg
+    chips:
+    - label: Tam Coffee
+      url: https://maps.app.goo.gl/FcEVAwCXARgMQadg6
   - title: "Market and Lunch"
     text: |
       After getting coffee I split up with Steven and Paul to check out from the hotel, head to the market for a bit and get some lunch.
@@ -62,6 +65,9 @@ events:
       caption: Got a sausage from this vendor. The ones on the left are sweet and the ones on the right are spicy (I got a spicy one).
     - src: /assets/images/day22/night-market-pancakes.jpg
       caption: Dessert was one of these coconut pancakes with corn inside. Soft and gooey inside with a crispy outside
+    chips:
+    - label: Vientiane Night Food Market
+      url: https://maps.app.goo.gl/xPhP5p328BrKJE399
 ---
 
 Today I said bye to Steven and Paul and headed to Vientiane.
