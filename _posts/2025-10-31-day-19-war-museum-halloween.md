@@ -35,6 +35,9 @@ events:
   - title: "Checking out and back in"
     text: |
       Since we had arrived a day early and our main hotel was completely full, we had needed to book a different hotel for the previous night. We checked out, and walked over to our new hotel - the Hotel Continental Saigon which was built in the French colonial era and is the oldest hotel in Vietnam! It's probably the most fancy spot I have booked for this entire trip. Very cool architecture and the rooms are huge - bigger than my first apartment in Seattle.
+    media:
+    - src: /assets/images/day19/hotel-continental.jpg
+      caption: "Definitely the fanciest hotel I'm staying in"
   - title: "War Remnants Museum"
     text: |
       After checking into our new hotel, we headed out to this museum which highlights the Vietnam War. The outside showcased some of the weaponry left behind after the US retreated. The inside contained an interesting temporary exhibit and several very sobering exhibits detailing the impact the war had on the people of Vietnam. The temporary exhibit was about the impact the war had on food, and detailed several things such as how some crops like peanuts became very common due to how easy and quick they were to grow and harvest; how people had to change their cooking habits to support the soldiers; how soldiers learned how to identify wild leaves and fruit that were safe to eat in order to minimize what they carried; and more.
