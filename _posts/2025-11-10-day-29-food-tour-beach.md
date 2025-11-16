@@ -2,7 +2,7 @@
 layout: post
 title: "Day 29 — Food tour and beach"
 date: 2025-11-10
-location: "Phuket Thailand"
+location: "Phuket, Thailand"
 cover_image: /assets/images/day29/be-4.jpg
 summary: "I ate food and relaxed on the beach"
 tags: [phuket, thailand]

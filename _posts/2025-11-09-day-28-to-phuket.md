@@ -2,7 +2,7 @@
 layout: post
 title: "Day 28 — To Phuket"
 date: 2025-11-09
-location: "Bangkok, Thailand -> Phuket Thailand"
+location: "Bangkok, Thailand -> Phuket, Thailand"
 cover_image: /assets/images/day28/bbq.jpg
 summary: "I forgot to take photos today"
 tags: [bangkok, phuket, thailand]
