@@ -5,7 +5,7 @@ date: 2025-11-16
 location: "Kuala Lumpur, Malaysia -> Jakarta, Indonesia"
 cover_image: /assets/images/day35/fishing.jpg
 summary: "Continuing onwards"
-tags: [kuala lumpur, kl, malaysia]
+tags: [kuala lumpur, kl, malaysia, jakarta, indonesia]
 events:
   - title: Nasi Lemak Breakfast
     text: |
