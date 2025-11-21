@@ -18,7 +18,7 @@ events:
       There’s an express train from KL Sentral station directly to KUL airport, which is nice by itself. The extra cool part though, is that if you’re flying Malaysia Airlines (which I was) you can check in directly at the train station, which not only saves you the time of standing in line at the airport, but also means you don’t need to worry about carrying your check-in luggage onto the train! Super convenient.
   - title: To Jakarta
     text: |
-      After arriving with some time to spare and chilling at the airport, I boarded my flight to Jakarta. Any guesses on whether it was delayed or not? It actually arrived 20 min early! Way to beat expectations.
+      After arriving with some time to spare and chilling at the airport, I boarded my flight to Jakarta. Any guesses on whether it was delayed or not? It actually arrived 20 min early! Way to beat expectations. Can't believe I'm already on my second last stop though 😭
     media:
     - src: /assets/images/day35/fishing.jpg
       caption: The view coming into Jakarta. If you look close you can see all the fishing zones.
