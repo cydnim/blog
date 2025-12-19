@@ -1,7 +1,7 @@
 ---
 layout: single
 # title: Timeline
-title: "Trip Timeline"
+title: "Healing Timeline"
 subtitle: "Track each stop and daily highlights"
 permalink: /
 ---
