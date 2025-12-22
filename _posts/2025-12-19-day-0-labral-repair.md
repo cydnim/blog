@@ -4,14 +4,14 @@ title: Day 0- labral repair
 date: 2025-12-20T00:00:00Z
 location: UWMC
 cover_image: /assets/images/day0/cover_image.jpg
-summary: surgery went smooth and we were discharged
+summary: 'surgery #1/2 went smooth and I was discharged. PAO/surgery #2 in three weeks. '
 events:
 - title: 'Hip labral repair '
   text: 'First surgery went well with no complications! Got the good anti-nausea IV
     zofran and scopolamine patch and was sent on my way.
 
 
-    Labrum was reattached, and bone was shaved ot prevent contact and retearing of
+    Labrum was reattached, and bone was shaved to prevent contact and retearing of
     the sensative area of my labrum'
   media:
   - src: /assets/images/day0/4f6dd9a9-7b2e-447d-a996-7f21984ae8c7.jpg
