@@ -19,7 +19,7 @@ events:
   media:
   - src: /assets/images/day5/974b9b60-0a40-476f-9e90-f3ca8f2fcdef.jpg
   - src: /assets/images/day5/e761df01-ea62-4fe7-be0a-7eadd7055793.jpg
-- title: FIRST REAL SHOWER
+- title: FIRST REAL SHOWER!!!
   text: Finally got to shower and scrub my hair. YAY!
   media:
   - src: /assets/images/day5/e8b84e65-c851-4012-b9a2-94818ba8b7f5.jpg
