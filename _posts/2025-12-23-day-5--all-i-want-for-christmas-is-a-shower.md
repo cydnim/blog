@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Day 5 \u2014 All I want for christmas is a shower"
-date: 2025-12-25T00:00:00Z
+date: 2025-12-24T00:00:00Z
 location: ''
 cover_image: /assets/images/day5/cover_image.jpg
 summary: ''
