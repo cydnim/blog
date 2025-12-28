@@ -11,7 +11,8 @@ events:
     not knowing they shared some effects and ended up with full body tingling and
     eventually panic for hours instead of a deep sleep. All was assured by resident
     on call and finally went to sleep at 4am when the tingling started to subside
-    enough to ignore it. POTS is mad but we\u2019re good now."
+    enough to ignore it. POTS is mad but we\u2019re good now.\n\n#zero days since
+    incident"
 - title: Big bandage off!
   text: Sahir and I played a game of guess where the scars are. We were pleasantly
     surprised there was only two incisions.
