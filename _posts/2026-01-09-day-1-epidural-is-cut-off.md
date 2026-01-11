@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Day 1\u2014 Epidural is cut off"
-date: 2026-01-11T00:00:00Z
+date: 2026-01-10T00:00:00Z
 location: ''
 cover_image: /assets/images/day2/cover_image.jpg
 summary: ''
