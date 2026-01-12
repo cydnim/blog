@@ -27,9 +27,10 @@ events:
   - src: /assets/images/day1/352a83e8-10d4-41c9-a6f9-5be462ed7ee7.jpg
 - title: Too much Dilaudid
   text: "My pain management was not quite enough and I told my nurse and she gave
-    me too much Dilaudid(not her fault I\u2019m just a light weight) and was stuppered
+    me too much Dilaudid(not her fault I\u2019m just a light weight) thought my throat
+    was closing but really it just hit me so fast my body panicked. I was stuppered
     for a while and couldn\u2019t eat my sour candy.\n\nThen slept through the night
-    with just NSAIDs and tylenol!\n\n"
+    with just NSAIDs and tylenol!\n\n# 0 days since incident"
   media:
   - src: /assets/images/day1/3646c92d-44c9-481f-b258-45afec283df8.jpg
 - title: Sleep over
