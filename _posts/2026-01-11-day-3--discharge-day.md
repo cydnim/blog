@@ -3,7 +3,7 @@ layout: post
 title: "Day 3 \u2014 Discharge day!"
 date: 2026-01-12T00:00:00Z
 location: ''
-cover_image: /assets/images/day11/cover_image.jpg
+cover_image: /assets/images/day3/cover_image.jpg
 summary: I met my PT and OT goals on monday and was discharged monday night!
 events:
 - title: PT milestones
